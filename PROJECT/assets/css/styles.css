@@ -1049,10 +1049,10 @@ ul{
 .portfolio-menu{
     margin-bottom: 30px;
 }
-.portfolio-menu button{
+.portfolio-menu a{
     position: relative;
     padding: 12px 12px;
-    margin-right: 50px;
+
     text-transform: uppercase;
     color: #fff;
     border: 3px solid lightblue;
@@ -1063,13 +1063,13 @@ ul{
     overflow: hidden;
     z-index: 9;
     display: inline-block;
-    width: 160px;
+    width: 193px;
 
 }
-.portfolio-menu button.active{
+.portfolio-menu a.active{
     background: #0552b1;
 }
-.portfolio-menu button::before{
+.portfolio-menu a::before{
     position: absolute;
     right: -30px;
     top: 0;
@@ -1081,7 +1081,7 @@ ul{
     -webkit-transform: skew(-48deg);
     -moz-transform: skew(-48deg);
 }
-.portfolio-menu button.active::before{
+.portfolio-menu a.active::before{
     
 }
 .portfolio-wrap{
