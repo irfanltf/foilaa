@@ -1066,10 +1066,42 @@ ul{
     width: 193px;
 
 }
+.portfolio-menu button{
+    position: relative;
+    padding: 12px 12px;
+
+    text-transform: uppercase;
+    color: #fff;
+    border: 3px solid lightblue;
+    border-radius: 50px;
+    font-size: 12px;
+    background: rgb(6,0,101);
+    background: linear-gradient(94deg, rgba(6,0,101,1) 0%, rgba(9,9,121,1) 26%, rgba(10,90,142,1) 100%);
+    overflow: hidden;
+    z-index: 9;
+    display: inline-block;
+    width: 193px;
+
+}
 .portfolio-menu a.active{
     background: #0552b1;
 }
+.portfolio-menu button.active{
+    background: rgb(6,0,101);
+}
 .portfolio-menu a::before{
+    position: absolute;
+    right: -30px;
+    top: 0;
+    z-index: -9;
+    width: 55px;
+    height: 100%;
+    content: "";
+    transform: skew(-48deg);
+    -webkit-transform: skew(-48deg);
+    -moz-transform: skew(-48deg);
+}
+.portfolio-menu button::before{
     position: absolute;
     right: -30px;
     top: 0;

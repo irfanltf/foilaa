@@ -28,6 +28,64 @@
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<!-- responsive css -->
         <link rel="stylesheet" href="assets/css/responsive.css">
+        <!-- Tambahan -->
+         <style type="text/css">
+            /* Style the tab buttons */
+            .tablink {
+              background-color: #093f82;
+              color: white;
+              float: left;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              padding: 14px 16px;
+              font-size: 17px;
+              width: 20%;
+            }
+
+            /* Change background color of buttons on hover */
+            .tablink:hover {
+              background-color: #ab1313;
+            }
+
+            /* Set default styles for tab content */
+            .tabcontent {
+              color: white;
+              display: none;
+              padding: 00px;
+              text-align: center;
+              background-color: #fff;
+              border: 1px;
+            }
+
+            .image {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+
+            .overlay {
+              position: absolute; 
+              bottom: 0; 
+              background: rgb(0, 0, 0);
+              background: rgba(0, 0, 0, 0.5); /* Black see-through */
+              color: #f1f1f1; 
+              width: 100%;
+              transition: .5s ease;
+              opacity:0;
+              color: white;
+              font-size: 20px;
+              padding: 20px;
+              text-align: center;
+            }
+
+            /* Style each tab content individually */ 
+/*            #Lokasi {background-color:red;}
+            #Pasar {background-color:red;}
+            #Pemerintah {background-color:red;}
+            #Masyarakat {background-color:red;}
+            #Penghargaan {background-color:red;}*/
+        </style>
 		<!-- modernizr css -->
         <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="assets/code/highcharts.js"></script>
@@ -247,28 +305,28 @@
                         </div>
                         <div class="col-md-2 col-sm-6 col-xs-12 wow fadeInUp portfolio-menu" data-wow-delay=".1s">
                          
-                                <a href="lokasi.html" class="text-center"><i class="fa fa-home fa-2x"></i><p style="font-family: arial; display: inline; color: #fff; font-style: normal;">  Location</p></a>
+                                <button  class="text-center tablink" id="defaultOpen" onclick="openCity('lokasi', this, '#ab1313')"><i class="fa fa-home fa-2x"></i><p style="font-family: arial; display: inline; color: #fff; font-style: normal;">  Location</p></button>
                           
                         </div>
                         <div class="col-md-2 col-sm-6 col-xs-12 wow fadeInUp portfolio-menu" data-wow-delay=".1s">
                            
-                               <a href="market.html" class="text-center"><i class="fa fa-cutlery fa-2x"></i><p style="font-family: arial; display: inline; color: #fff; font-style: normal;">  Resources</p></a>
+                               <button  class="text-center tablink" onclick="openCity('pasar', this, '#ab1313')"><i class="fa fa-cutlery fa-2x"></i><p style="font-family: arial; display: inline; color: #fff; font-style: normal;">  Resources</p></button>
                             </div>
         
                         <div class="col-md-2 col-sm-6 col-xs-12 wow  fadeInUp portfolio-menu" data-wow-delay=".1s">
                             
-                                <a href="society.html" class="text-center"><i class="fa fa-users fa-2x"></i><p style="font-family: arial; display: inline; color: #fff; font-style: normal;">  Population</p></a>
+                                <button  class="text-center tablink" onclick="openCity('masyarakat', this, '#ab1313')"><i class="fa fa-users fa-2x"></i><p style="font-family: arial; display: inline; color: #fff; font-style: normal;">  Population</p></button>
                         </div>
                             </div>
              
                         <div class="col-md-2 col-sm-6 col-xs-12 wow fadeInUp portfolio-menu" data-wow-delay=".1s">
                            
-                              <a href="achievment.html" class=" text-center"><i class="fa fa-trophy fa-2x"></i><p style="font-family: arial; display: inline; color: #fff; font-style: normal;">Achievement</p></a>
+                              <button  class=" text-center tablink" onclick="openCity('prestasi', this, '#ab1313')"><i class="fa fa-trophy fa-2x"></i><p style="font-family: arial; display: inline; color: #fff; font-style: normal;">Achievement</p></button>
                             </div>
              
                         <div class="col-md-2 col-sm-6 col-xs-12 wow fadeInUp portfolio-menu" data-wow-delay=".1s">
                            
-                             <a href="government.html" class="text-center"><i class="fa fa-head fa-2x"></i><p style="font-family: arial; display: inline; color: #fff; font-style: normal;">Government</p></a>
+                             <button class="text-center tablink" onclick="openCity('government', this, '#ab1313')"><i class="fa fa-university fa-2x"></i><p style="font-family: arial; display: inline; color: #fff; font-style: normal;">Government</p></button>
      
                         </div>
                         
@@ -280,12 +338,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
     
 <!-- Akhir Menu -->
 
@@ -298,8 +350,20 @@
 
         <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <img src="assets/images/bg/WEB1.jpg">
+                        <div id="lokasi" class="col-md-12 col-sm-12 col-xs-12 tabcontent">
+                            <img src="assets/images/why/lokasi.jpg">
+                        </div>
+                        <div id="pasar" class="col-md-12 col-sm-12 col-xs-12  tabcontent">
+                            <img src="assets/images/why/pasar.jpg">
+                        </div>
+                        <div id="masyarakat" class="col-md-12 col-sm-12 col-xs-12 tabcontent">
+                            <img src="assets/images/why/masyarakat.jpg">
+                        </div>
+                        <div id="prestasi" class="col-md-12 col-sm-12 col-xs-12 tabcontent">
+                            <img src="assets/images/why/prestasi.jpg">
+                        </div>
+                        <div id="government" class="col-md-12 col-sm-12 col-xs-12 tabcontent">
+                            <img src="assets/images/why/government.jpg">
                         </div>
                     </div>
                 </div>
@@ -793,6 +857,33 @@
             
 		</footer>
 		<!-- footer-area end  -->
+
+
+        <script type="text/javascript">
+            function openCity(cityName, elmnt, color) {
+          // Hide all elements with class="tabcontent" by default */
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+
+          // Remove the background color of all tablinks/buttons
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+
+          // Show the specific tab content
+          document.getElementById(cityName).style.display = "block";
+
+          // Add the specific color to the button used to open the tab content
+          elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
 
 <!-- Data from www.netmarketshare.com. Select Browsers => Desktop share by version. Download as tsv. -->
 <pre id="tsv" style="display:none">Browser Version    Total Market Share
