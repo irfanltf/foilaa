@@ -38,6 +38,7 @@ p {
 	margin:0px;
 	color: #555;
 }
+
 h1, h2, h3, h4, h5, h6 {
 	color: #333;
 	margin-bottom: 10px;
@@ -1080,7 +1081,7 @@ ul{
     overflow: hidden;
     z-index: 9;
     display: inline-block;
-    width: 193px;
+    width: 100%;
 
 }
 .portfolio-menu a.active{
@@ -1653,7 +1654,7 @@ ul{
 	opacity:.4;
 }
 .test-active{
-	padding-bottom:50px;
+	padding-bottom:10px;
 }
 .test-active.dotate-style .owl-dots{
 	bottom:-4px;
@@ -3454,3 +3455,4 @@ margin-top: 80px;
 .mar{
   margin-bottom: 0;
 }
+

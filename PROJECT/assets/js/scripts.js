@@ -372,10 +372,10 @@
 				slideBy:1
 			},
 			678:{
-				items:2
+				items:6
 			},
 			1000:{
-				items:2
+				items:6
 			}
 		}
 	})
